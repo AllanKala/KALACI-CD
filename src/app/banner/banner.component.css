@@ -1,0 +1,23 @@
+/* img {
+    width: 100%;
+    max-height: 600px;
+} */
+.img {
+    background-image: url("../../assets/le_blanc_deyenga.jpg");
+    height: 650px;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+}
+p, h2{
+    color: white;
+    text-align: center;
+    position: relative;
+    top: -355px;
+    font-weight: bold;
+    font-size: 30px;
+}
+h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+

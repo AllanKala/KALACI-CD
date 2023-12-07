@@ -1,0 +1,47 @@
+<h2>Liste des films:</h2>
+<div *ngIf="currentURL === '/cinema'; else elseBlock">
+<table border="2">
+    <tr>
+        <td class="header"></td>
+        <td class="header">Titre du film</td>
+        <td class="header">Le numero de version</td>
+        <td class="header">Nombre d'auteur</td>
+        <td class="header">Nombre personnages</td>
+        <td class="header">Description</td>
+        <td class="header">Titres des collections</td>
+    </tr>
+    <tr *ngFor="let item of filmss">
+        <td><img src="{{item.thumbnail.path}}" alt=""></td>
+        <td>{{item.title}}</td>
+        <td>{{item.issueNumber}}</td>
+        <td>{{item.creators.available}}</td>
+        <td>{{item.characters.available}}</td>
+        <td>{{item.description}}</td>
+        <td><a>{{item.title}}</a></td>
+        <td><button (click)="routereven(item)">Détails</button></td>
+    </tr>
+</table>
+</div>
+<ng-template #elseBlock>
+    <table border="2">
+        <tr>
+            <td class="header"></td>
+            <td class="header">Titre du film</td>
+            <td class="header">Le numero de version</td>
+            <td class="header">Nombre d'auteur</td>
+            <td class="header">Nombre personnages</td>
+            <td class="header">Description</td>
+            <td class="header">Titres des collections</td>
+        </tr>
+        <tr *ngFor="let item of COMICSAVECIMAGES">
+            <td><img src="{{item.thumbnail.path}}.{{item.thumbnail.extension}}" alt="image"></td>
+            <td>{{item.title}}</td>
+            <td>{{item.issueNumber}}</td>
+            <td>{{item.creators.available}}</td>
+            <td>{{item.characters.available}}</td>
+            <td>{{item.description}}</td>
+            <td><a>{{item.title}}</a></td>
+            <td><button (click)="routereven(item)">Détails</button></td>
+        </tr>
+    </table>
+</ng-template>

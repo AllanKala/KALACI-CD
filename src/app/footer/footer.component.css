@@ -1,0 +1,16 @@
+div {
+    max-width: 100%;
+    background-color: #f1f1f1;
+    /* margin-top: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+ 
+}
+p {
+    font-weight: bold;
+}
+.haut {
+    margin-right: 4%;
+}
